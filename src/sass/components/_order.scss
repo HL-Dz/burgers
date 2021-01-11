@@ -1,0 +1,166 @@
+.order {
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+	color: #fff;
+
+	& .section__title {
+		text-align: center;	
+		
+	}
+
+	& .container {
+		position: relative;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+
+	&__form-teg {
+		@extend %clearfix;
+	}
+
+	&__form-col {
+		float: left;
+		width: 45%;
+		margin-left: 5%;
+	}
+
+	&__form-row {
+		margin-bottom: 16px;
+		@extend %clearfix;
+		margin-left: -20px;
+
+		&_double {
+			margin-left: -40px;
+		}
+
+		&_double .order__form-block {
+				float: left;
+				width: calc(100%/2 - 20px);
+				margin-left: 20px;
+		}
+
+		&_quatro {
+			margin-left: -40px;
+
+			.order__form-block {
+				width: calc(100% / 4 - 20px);
+				float: left;
+				margin-left: 20px;
+			}
+		}
+	}
+
+	&__form-block {
+		display: block;
+	}
+
+	&__form-name {
+		font-size: 14px;
+		font-family: 'Ubuntu-Light';
+		margin-bottom: 16px;
+	}
+
+	&__form-input {
+		border: 1px solid  #d1cfcb;
+		outline: none;
+		padding: 5px 10px;
+		border-radius: 5px;
+		width: 100%;
+		font-size: 14px;
+		font-family: 'Ubuntu-Light';
+		// outline: 0;
+
+		&_textarea {
+			height: 104px;
+			resize: none;
+			// font-size: 16px;
+			// font-weight: bold;
+		}
+	}
+
+	&__radio {
+		position: relative;
+		white-space: nowrap;
+		margin-right: 20px;
+		display: inline-block;
+		vertical-align: middle;
+		cursor: pointer;
+
+		&_checkbox .order__radio-fake {
+			border-radius: 0;
+			&+.order__radio-fake::after {
+				background: transparent;
+			}
+		}
+	}
+
+	&__radio-elem {
+		position: absolute;
+		top: 0;
+		left: -9999px;
+
+		&:checked+.order__radio-fake::after {
+			width: 8px;
+			height: 8px;
+		}
+	}
+
+	&__radio-fake {
+		width: 16px;
+		height: 16px;
+		border-radius: 50%;
+		background: #fff;
+		display: inline-block;
+		vertical-align: middle;
+		position: relative;
+
+		&::after {
+			content: "";
+			display: block;
+			position: absolute;
+			width: 0;
+			height: 0;
+			border-radius: 50%;
+			background: #e35028;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			transition: width .3s, height .3s;
+		}
+	}
+
+	&__radio-title {
+		display: inline-block;
+		vertical-align: middle;
+		font-size: 14px;
+		color: #fff;
+		margin-left: 10px;
+	}
+
+	&__form-button {
+		display: inline-block;
+		vertical-align: middle;
+		margin-right: 20px;
+		border: 0;
+		font-size: 13px;
+		text-transform: uppercase;
+		padding: 10px 15px;
+		cursor: pointer;
+		outline: none;
+
+		&-reset {
+			padding-left: 0;
+			padding-right: 0;
+			background: transparent;
+			color: #fff;
+			font-size: 14px;
+			font-family: 'Ubuntu-Light';
+			text-transform: none;
+			display: inline-block;
+			vertical-align: middle;
+			
+		}
+	}
+}

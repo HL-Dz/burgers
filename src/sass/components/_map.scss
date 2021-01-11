@@ -1,0 +1,74 @@
+.map {
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+}
+
+.yandex-map {
+	height: calc(100% - 60px);
+	background: #fff;
+}
+ 
+.footer {
+	background-position: center bottom;
+	background-size: cover;
+	height: 60px;
+	padding-top: 10px;
+
+	& .container {
+		@extend %clearfix;
+	}
+
+	&__col {
+		width: 50%;
+		float: left;
+
+		&-right {
+			text-align: right;
+			padding-top: 9px;
+		}
+	}
+
+	&__address {
+		font-size: 14px;
+		color: #fff;
+		font-family: 'Ubuntu-Light';
+	}
+
+	&__phone {
+		font-size: 14px;
+		font-family: 'Ubuntu-Bold';
+		color: #e45028;
+	}
+}
+
+.socials {
+	position: relative;
+	top: 50%;
+
+	&__item {
+		display: inline-block;
+		vertical-align: middle;
+		margin-left: 13px;
+	}
+
+	&__link {
+		display: inline-block;
+		max-width: 23px;
+		max-height: 20px;
+		opacity: .3;
+		transition: .3s;
+
+		&:hover {
+			opacity: 1;
+		}
+	}
+
+	&__icon {
+		display: block;
+		width: 23px !important;
+		height: 23px !important;
+		fill: #fff;
+	}
+}

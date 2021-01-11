@@ -1,0 +1,74 @@
+.best {
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	text-align: center;
+
+	& .section__title {
+		margin-bottom: 80px;
+	}
+}
+
+.best .container {
+	position: relative;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+
+.best__list {
+	font-size: 0;
+}
+
+.best__list * {
+	font-size: 14px;
+}
+
+.best__item {
+	display: inline-block;
+	vertical-align: top;
+	width: 33.3%;
+	padding: 0 10px;
+}
+
+.best__icon {
+	width: 100px;
+	height: 100px;
+	position: relative;
+	display: inline-block;
+	margin-bottom: 15px;
+}
+
+.best__icon-pic {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	-o-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	width: 100%;
+	height: 100%;
+}
+
+.best__icon-image {
+	width: 100%;
+	height: 100%;
+}
+
+.best__title {
+	font-size: 24px;
+	font-family: 'Lifehack-Medium';
+	color: $black;
+	margin-bottom: 20px;
+}
+
+.text-block p {
+	font-size: 14px;
+	line-height: 1.8;
+}

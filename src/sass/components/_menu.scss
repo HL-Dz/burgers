@@ -1,0 +1,85 @@
+.menu {
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+}
+
+.menu__title {
+	position: absolute;
+	top: 100px;
+	left: 100px;
+}
+
+/*MENU-ACCO*/
+
+.menu-acco {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	@extend %clearfix;
+
+	&__item {
+		float: left;
+		height: 100%;
+		@extend %clearfix;
+
+		&.active {
+			.menu-acco__trigger-text {
+				color: $orange;
+			}
+		}
+	}
+
+	&__trigger {
+		float: left;
+		height: 100%;
+		display: block;
+		width: 80px;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center center;
+		position: relative;
+
+		&:hover {
+			.menu-acco__trigger-text {
+				color: $orange;
+			}
+		}
+	}
+
+	&__trigger-text {
+		font-size: 40px;
+		font-family: 'Gagalin-Regular';
+		color: $white;
+		position: absolute;
+		top: 50%;
+		height: 80px;
+		margin-top: -40px;
+		white-space: nowrap;
+		width: 650px;
+		left: 50%;
+		margin-left: -312px;
+		transform: rotate(-90deg);
+		text-align: center;
+		transition: .3s;
+	}
+
+	&__content {
+		background: rgba(47, 50, 52, 0.93);
+		float: left;
+		height: 100%;
+		color: #fff;
+		overflow: hidden;
+		width: 0;
+	}
+
+	&__text {
+		width: 550px;
+		font-size: 16px;
+		font-family: 'Ubuntu-Light';
+		padding: 60px 30px;
+		line-height: 1.8;
+	}
+}

@@ -1,0 +1,179 @@
+.hero {
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+	color: #fff;
+}
+
+.header {
+	padding-top: 12px;
+}
+.header__logo {
+	float: left;
+	width: 32%;
+}
+
+.logo {
+	display: inline-block;
+}
+
+.header__menu {
+	float: left;
+	width: 68%;
+	padding-top: 16px;
+}
+
+.nav {
+	width: 83%;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.nav__list {
+	width: 100%;
+}
+
+.nav__item {
+	white-space: no-wrap;
+	margin-right: 15px;
+	display: block;
+	float: left;
+
+	&:last-child {
+		margin-right: 0;
+
+		&:after {
+			display: none;
+			
+		}
+	}
+
+	&:after {
+		content: "";
+		display: inline-block;
+		vertical-align: middle;
+		width: 4px;
+		height: 4px;
+		border-radius: 50%;
+		background: #fff;
+		margin-left: 15px;
+
+	}
+}
+
+.nav__link {
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 13px;
+	text-transform: uppercase;
+	color: #fff;
+	text-decoration: none;
+	font-family: 'Ubuntu-Medium';
+
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
+/* .order-link {
+	width: 14%;
+	display: inline-block;
+	vertical-align: middle;
+	padding: 9px 0;
+	margin-left: 2%;
+} */
+
+
+.hero__container {
+	position: absolute;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	transform: translateY(-50%);
+	left: 0;
+	right: 0;
+}
+
+.hero__content {
+	@extend %clearfix;
+}
+
+.hero__left, .hero__right {
+	float: left;
+	width: 50%;
+}
+
+
+.hero__img {
+	display: inline-block;
+	min-width: 100%;
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.hero__right {
+	padding-top: 115px;
+}
+
+.section__title {
+	margin-bottom: 12px;
+}
+
+.hero__desc {
+	font-size: 65px;
+	font-family: 'Lifehack-Medium';
+	text-transform: lowercase;
+	line-height: 1;
+}
+
+
+.down-arrow {
+	display: block;
+	position: absolute;
+	bottom: 20px;
+	left: 50%;
+	width: 60px;
+	height: 60px;
+	margin-left: -15px;
+	transition: .3s;
+
+	&__icon-wrapper {
+		display: block;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		-webkit-transform: translate(-50%, -50%);
+		-moz-transform: translate(-50%, -50%);
+		-ms-transform: translate(-50%, -50%);
+		-o-transform: translate(-50%, -50%);
+		transform: translate(-50%, -50%);
+	}
+
+	&__icon {
+		display: block;
+		fill: #fff;
+	}
+
+	& {
+		svg {
+			width: 30px;
+			height: 30px;
+			transition: .3s;
+			position: relative;
+			top: 0;
+		}
+	}
+
+	&:hover {
+		svg {
+			top: -15px;
+			width: 40px;
+			height: 40px;
+		}
+	}
+}
+

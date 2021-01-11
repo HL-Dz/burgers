@@ -1,0 +1,24 @@
+%transition {
+  transition: all 0.5s ease;
+}
+
+%clearfix {
+	&:after {
+		content: "";
+		display: block;
+		clear: both;
+	}
+}
+
+%custom-scroll {
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
+  &::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 1px grey;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: rgb(124, 172, 143);
+    border-radius: 7px;
+  }
+}

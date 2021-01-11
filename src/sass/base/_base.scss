@@ -1,0 +1,171 @@
+$container-width: 940px;
+
+body, html {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-size: 16px;
+	line-height: 1.42;
+	font-family: 'Ubuntu-Light', Arial, sans-serif;
+	color: $black;
+	-webkit-font-smoothing: antialiased;
+}
+
+a {
+	text-decoration: none;
+}
+
+p {
+	padding: 0;
+	margin: 0;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+
+	li {
+		list-style: none;
+	}
+}
+
+h1,h2,h3,h4,h5,h6 {
+	margin-top: 0;
+	font-weight: normal;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+.container {
+	width: $container-width;
+	margin: 0 auto;
+}
+
+.wrapper {
+	position: relative;
+	overflow: hidden;
+	height: 100%;
+	min-width: $container-width + 20px;
+}
+
+.maincontent {
+	height: 100%;
+	transform: translate3d(0, 0, 0);
+	transition: 1s;
+}
+
+
+.section {
+	height: 100vh;
+	min-height: 650px;
+}
+
+.footer {
+	min-width: $container-width + 20px;
+	position: relative;
+}
+
+
+.btn {
+	background: #e45028;
+	font-size: 13px;
+	text-align: center;
+	color: #fff;
+	text-transform: uppercase;
+	border-radius: 5px;
+	font-family: 'Ubuntu-Medium';
+	transition: background .3s;
+	padding: 9px 16px;
+
+	&:hover {
+		background: #c1401e;
+	}
+}
+
+.section__title {
+	color: #f9b43b;
+	font-size: 72px;
+	font-family: 'Gagalin-Regular';
+}
+
+.section__title-black {
+	color: $black;
+}
+
+.section__title-white {
+	color: $white;
+}
+
+
+.fixed-menu {
+	position: fixed;
+	top: 70px;
+	right: 40px;
+
+	&__item {
+		margin-bottom: 9px;
+
+		&.active {
+			.fixed-menu__link::before {
+				width: 14px;
+				height: 14px;
+				opacity: 1;
+			}
+		}
+	}
+
+	&__link {
+		width: 16px;
+		height: 16px;
+		display: block;
+		position: relative;
+
+		&::before {
+			width: 0px;
+			height: 0px;
+			border-radius: 50%;
+			border: 1px solid #fff;
+			opacity: 1;
+			transition: .3s;
+		}
+
+		&:hover {
+			&::before {
+				width: 14px;
+				height: 14px;
+				opacity: 1
+			}
+		}
+
+		&::after {
+			width: 6px;
+			height: 6px;
+			background: #fff;
+		}
+
+		&::before, &::after {
+			content: "";
+			display: block;
+			position: absolute;
+			border-radius: 50%;
+			top: 50%;
+			left: 50%;
+			-webkit-transform: translate(-50%, -50%);
+			-moz-transform: translate(-50%, -50%);
+			-ms-transform: translate(-50%, -50%);
+			-o-transform: translate(-50%, -50%);
+			transform: translate(-50%, -50%);
+		}
+	}
+}
+
+
+.fancybox-close-small {
+	display: none;
+}

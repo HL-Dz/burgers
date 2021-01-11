@@ -1,0 +1,106 @@
+.team {
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+
+	& .section__title {
+		margin-bottom: 75px;
+	}
+}
+
+.team__section {
+	position: absolute;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	left: 50%;
+	background: rgba(47, 50, 52, 0.93);
+	padding: 5% 2% 0 7%;
+	color: #fff;
+}
+
+
+/*TEAM-ACCO*/
+.team-acco {
+	padding-left: 17px;
+
+	&__item {
+		margin-bottom: 40px;
+
+		&.active {
+
+			.team-acco__trigger {
+				color: $orange;
+
+				&:before {
+					transform: rotate(-180deg);
+				}
+			}
+		}
+	}
+
+	 &__trigger {
+		color: #fff;
+		font-size: 14px;
+		font-family: 'Gagalin-Regular';
+		position: relative;
+		display: block;
+	
+		&:before {
+			content: "";
+			display: block;
+			position: absolute;
+			left: -18px;
+			top: 6px;
+			width: 0;
+			height: 0;
+			border-top: 7px solid #f9b43b;
+			border-right: 5px solid transparent;
+			border-left: 5px solid transparent;
+			border-bottom: 0px solid transparent;
+			transform: rotate(0deg);
+			transition: .3s;
+		}
+
+	}
+	
+	&__content {
+			padding-top: 14px;
+			display: none;
+			@extend %clearfix;
+		}
+	
+	&__pic {
+		float: left;
+		width: 30%;
+		text-align: center;
+	}	
+	
+	&__img {
+		display: inline-block;
+		vertical-align: top;
+		width: 100px;
+		height: 100px;
+		background-size: cover;
+		background-position:  center center;
+		background-repeat: no-repeat;
+		border-radius: 50%;
+	}
+	
+	&__text {
+		float: left;
+		width: 70%;
+	}
+	
+	&__title {
+		font-size: 14px;
+		font-family: 'Ubuntu-Bold';
+		margin-bottom: 14px;
+	}
+	
+	&__text-content {
+		font-size: 14px;
+		font-family: 'Ubuntu-Light';
+	} 
+}
